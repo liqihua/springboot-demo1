@@ -6,14 +6,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-//@SpringBootApplication = (默认属性)@Configuration + @EnableAutoConfiguration + @ComponentScan
 @SpringBootApplication
 @RequestMapping("/helloController")
 public class HelloController {
 
+
     @RequestMapping("/hello")
-    public ResponseEntity hello(){
-        return new ResponseEntity<String>("hello", HttpStatus.OK);
+    public ResponseEntity home(){
+        return new ResponseEntity<String>("home", HttpStatus.OK);
     }
 
     /*不加@ResponseBody会报404*/
@@ -22,5 +22,4 @@ public class HelloController {
     public String test(){
         return "-- test --";
     }
-
 }

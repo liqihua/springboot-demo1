@@ -6,4 +6,4 @@ ADD restart.sh /opt/project/restart.sh
 WORKDIR /opt/project/
 RUN chmod 777 restart.sh
 #ENTRYPOINT sh restart.sh
-ENTRYPOINT nohup java -jar -Dserver.port=9111 springboot-demo1.war &
+ENTRYPOINT java -jar -Dserver.port=9111 springboot-demo1.war

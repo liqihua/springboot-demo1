@@ -78,7 +78,7 @@
         <artifactId>docker-maven-plugin</artifactId>
         <configuration>
           <imageName>liqihua/springboot:demo1</imageName>
-          <dockerDirectory>${project.basedir}/docker</dockerDirectory>
+          <dockerDirectory>${project.basedir}/</dockerDirectory>
           <skipDockerBuild>false</skipDockerBuild>
           <!--<resources>
             <resource>

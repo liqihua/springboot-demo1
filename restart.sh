@@ -11,5 +11,5 @@
 #  echo "----- service stop success"
 #fi
 #echo "----- starting project ..."
-nohup java -jar -Dserver.port=9111 springboot-demo1.war &
+java -jar -Dserver.port=9111 springboot-demo1.war
 #echo "---command finished."

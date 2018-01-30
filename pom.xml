@@ -80,12 +80,6 @@
           <imageName>liqihua/springboot:demo1</imageName>
           <dockerDirectory>${project.basedir}/</dockerDirectory>
           <skipDockerBuild>false</skipDockerBuild>
-          <!--<resources>
-            <resource>
-              <directory>${project.build.directory}</directory>
-              <include>${project.build.finalName}.war</include>
-            </resource>
-          </resources>-->
         </configuration>
       </plugin>
     </plugins>

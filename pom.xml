@@ -8,6 +8,10 @@
   <name>springboot-demo1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
+  <properties>
+    <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+  </properties>
+
   <!-- springboot必需 -->
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -77,7 +81,7 @@
         <groupId>com.spotify</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <configuration>
-          <imageName>liqihua/springboot:demo1</imageName>
+          <imageName>liqihua/springboot:${maven.build.timestamp}</imageName>
           <dockerDirectory>${project.basedir}/</dockerDirectory>
           <skipDockerBuild>false</skipDockerBuild>
         </configuration>

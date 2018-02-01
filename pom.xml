@@ -81,7 +81,7 @@
         <groupId>com.spotify</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <configuration>
-          <imageName>liqihua/springboot:${maven.build.timestamp}</imageName>
+          <imageName>liqihua/springboot:${timestamp}</imageName>
           <dockerDirectory>${project.basedir}/</dockerDirectory>
           <skipDockerBuild>false</skipDockerBuild>
         </configuration>

@@ -85,6 +85,15 @@
           <dockerDirectory>${project.basedir}/</dockerDirectory>
           <skipDockerBuild>false</skipDockerBuild>
         </configuration>
+        <executions>
+        <execution>
+          <id>build-image</id>
+          <phase>package</phase>
+          <goals>
+            <goal>build</goal>
+          </goals>
+        </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

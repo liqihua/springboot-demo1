@@ -1,15 +1,12 @@
 #!/bin/sh
-#echo "----- killing pid ..."
-#pidlist=`ps -ef|grep 9111|grep -v "grep"|awk '{print $2}'`
-#if [ "$pidlist" = "" ]
-#   then
-#       echo "----- no pid alive!"
-#else
-#  echo "----- pid list :$pidlist"
-#  kill -9 $pidlist
-#  echo "----- KILL $pidlist:"
-#  echo "----- service stop success"
-#fi
-#echo "----- starting project ..."
-java -jar -Dserver.port=9111 springboot-demo1.war
+serverPort=8080
+while getopts "p:" opt; do
+  case $opt in
+    p)
+      echo "--- server port is $OPTARG"
+      serverPort=$OPTARG
+      ;;
+  esac
+done
+java -jar -Dserver.port=${serverPort} springboot-demo1.war
 #echo "---command finished."

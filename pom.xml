@@ -95,6 +95,23 @@
         </execution>
         </executions>
       </plugin>
+      <!-- 获取时间戳插件，引用时间戳变量方式：${timestamp} -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.4</version>
+        <configuration>
+          <timestampFormat>yyyyMMddHHmmss</timestampFormat>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>create-timestamp</goal>
+            </goals>
+          </execution>
+        </executions>
+        <inherited>false</inherited>
+      </plugin>
     </plugins>
   </build>
 </project>
